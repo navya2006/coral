@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+
+<head>
+
+    <title>Coral | Always There For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Poiret+One&family=Raleway&display=swap&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href='main.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="lib/favicon.png" sizes="26x26" type="image/png">
+
+</head>
+
+<body onload="myFunction()">
+
+    <div class="load" id="load">
+        <center>
+            <div class="loader-wheel">
+            </div>
+        </center>
+    </div>
+
+    <div class="mainbod" id="mainbod">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top quiz-nav" id="navbar">
+            <a href="index.html" class="nav-img navbar-brand"><img src="lib/favicon.png"></a>
+        </nav>
+
+        <a class="sr-only sr-only-focusable" href="#sidenav">Skip to navigation bar</a>
+        <a class="sr-only sr-only-focusable" href="#home">Skip to main content</a>
+        <a class="sr-only sr-only-focusable" href="#end">Skip to footer</a>
+
+        <!-- QUIZ -->
+
+        <div class="back-quiz" id="home">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 quiz align-center">
+
+                    <div class="quiz-1">
+                        <h1 class="section-title">Enter your email</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input id="email" placeholder="Email Id" name="email" type="email"><br><br>
+                        <input type="checkbox" id="email-updates" name="email-updates" value="true">
+                        <label for="email-updates"> I would like to recieve regular updates from
+                            Coral.</label><br><br>
+                        <p class="text-danger" id="error-msg"></p>
+                        <button id="submitb" class="button" onclick="q1()">Next →</button>
+                    </div>
+
+                    <div class="quiz-2" hidden="true">
+                        <h1 class="section-title">Do you worry about lots of different things?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q2()">Next →</button>
+                    </div>
+
+                    <div class="quiz-3" hidden="true">
+                        <h1 class="section-title">Does worry or anxiety interfere with falling and/or staying asleep?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q3()">Next →</button>
+                    </div>
+
+                    <div class="quiz-4" hidden="true">
+                        <h1 class="section-title">Do you feel jumpy?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q4()">Next →</button>
+                    </div>
+
+                    <div class="quiz-5" hidden="true">
+                        <h1 class="section-title">Do you downplay your achievements?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q5()">Next →</button>
+                    </div>
+
+                    <div class="quiz-6" hidden="true">
+                        <h1 class="section-title">Do you compare yourself to others?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q6()">Next →</button>
+                    </div>
+
+                    <div class="quiz-7" hidden="true">
+                        <h1 class="section-title">How often do you feel restless or fidgety?</h1>
+                        <center>
+                            <div class="section-hr"></div>
+                        </center>
+                        <br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="1"></input>
+                        <label class="for-checkbox-tools" for="1">Never</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="2"></input>
+                        <label class="for-checkbox-tools" for="2">Rarely</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="3"></input>
+                        <label class="for-checkbox-tools" for="3">Sometimes</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="4"></input>
+                        <label class="for-checkbox-tools" for="4">Often</label><br>
+                        <input type="radio" class="checkbox-tools" name="choice" class="bloop" id="5"></input>
+                        <label class="for-checkbox-tools" for="5">Very Often</label><br>
+                        <button id="submitb" class="button" onclick="q7()">Next →</button>
+                    </div>
+
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+    <script src="index.js"></script>
+    <script src="quiz.js"></script>
+    <script src="fontawesome.js"></script>
+
+</body>
+
+</html>
